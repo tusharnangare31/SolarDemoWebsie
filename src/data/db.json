@@ -1,0 +1,569 @@
+{
+  "site_settings": {
+    "company_name": "Star",
+    "tagline": "India's Trusted Solar EPC Company • MNRE Approved",
+    "phone": "+91 98765 43210",
+    "phone_alt": "+91 98765 43211",
+    "whatsapp_number": "919876543210",
+    "email": "info@suntechsolar.in",
+    "email_sales": "sales@suntechsolar.in",
+    "address": "123, Solar Tower, MG Road, Jaipur, Rajasthan 302001",
+    "working_hours": "Mon - Sat: 9:00 AM - 7:00 PM",
+    "map_url": "https://maps.google.com/?q=Jaipur+Rajasthan",
+    "hero_title": "Power Your Future with Solar Energy",
+    "hero_subtitle": "Save up to 90% on electricity bills with India's trusted solar installation company. Residential, commercial & industrial solar solutions with government subsidy assistance.",
+    "hero_cta_primary": "Get Quote",
+    "hero_cta_secondary": "Calculate Savings",
+    "social_facebook": "https://facebook.com",
+    "social_twitter": "https://twitter.com",
+    "social_instagram": "https://instagram.com",
+    "social_linkedin": "https://linkedin.com",
+    "social_youtube": "https://youtube.com",
+    "updated_at": "2026-09-12T06:15:56.916Z"
+  },
+  "services": [
+    {
+      "id": "srv-1",
+      "slug": "residential",
+      "title": "Residential Solar",
+      "description": "Power your home with clean, renewable solar energy. Reduce electricity bills by up to 90% with our rooftop solar solutions designed for Indian homes.",
+      "icon": "Home",
+      "image": "/images/services/residential.jpg",
+      "order_index": 1,
+      "features": [
+        "Rooftop solar panel installation",
+        "Net metering setup assistance",
+        "Government subsidy processing",
+        "25-year performance warranty",
+        "Smart monitoring system",
+        "Free site survey & design"
+      ]
+    },
+    {
+      "id": "srv-2",
+      "slug": "commercial",
+      "title": "Commercial & Industrial",
+      "description": "Slash operational costs and achieve sustainability goals with large-scale solar solutions for businesses, factories, and commercial establishments.",
+      "icon": "Building2",
+      "image": "/images/services/commercial.jpg",
+      "order_index": 2,
+      "features": [
+        "Custom system design & engineering",
+        "Rooftop & ground-mounted systems",
+        "Power Purchase Agreements (PPA)",
+        "CAPEX & OPEX models available",
+        "Accelerated depreciation benefits",
+        "Remote monitoring & analytics"
+      ]
+    },
+    {
+      "id": "srv-3",
+      "slug": "systems",
+      "title": "On-grid / Off-grid / Hybrid",
+      "description": "Customized grid-tied, standalone battery backup, and hybrid solar power configurations tailored to local grid stability and backup requirements.",
+      "icon": "Zap",
+      "image": "/images/services/systems.jpg",
+      "order_index": 3,
+      "features": [
+        "On-grid systems for maximum bill savings",
+        "Off-grid battery storage for zero power cuts",
+        "Hybrid multi-mode inverters",
+        "Lithium iron phosphate (LiFePO4) storage",
+        "Automatic grid failover transfer switch",
+        "Surge protection & safety earthing"
+      ]
+    },
+    {
+      "id": "srv-4",
+      "slug": "maintenance",
+      "title": "Maintenance & AMC",
+      "description": "Keep your solar system running at peak performance with our comprehensive annual maintenance contracts and repair services.",
+      "icon": "Wrench",
+      "image": "/images/services/maintenance.jpg",
+      "order_index": 4,
+      "features": [
+        "Preventive & corrective maintenance",
+        "Panel cleaning services",
+        "Inverter health monitoring",
+        "Performance optimization",
+        "Emergency repair support",
+        "Quarterly inspection reports"
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "MonoCrystalline 545W Panel",
+      "category": "Solar Panels",
+      "description": "High-efficiency monocrystalline solar panel ideal for residential and commercial installations with limited roof space.",
+      "specs": [
+        "545 Wp",
+        "Mono PERC",
+        "21.3% Efficiency",
+        "25-Year Warranty"
+      ],
+      "image": "/images/products/panel-mono.jpg",
+      "price": 16500,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-2",
+      "name": "Bifacial 550W Panel",
+      "category": "Solar Panels",
+      "description": "Premium bifacial panel that captures sunlight from both sides for up to 20% additional energy generation.",
+      "specs": [
+        "550 Wp",
+        "Bifacial",
+        "22.1% Efficiency",
+        "30-Year Warranty"
+      ],
+      "image": "/images/products/panel-bifacial.jpg",
+      "price": 18200,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-3",
+      "name": "PolyCrystalline 335W Panel",
+      "category": "Solar Panels",
+      "description": "Cost-effective polycrystalline panel suitable for large-scale ground-mounted installations.",
+      "specs": [
+        "335 Wp",
+        "Polycrystalline",
+        "17.2% Efficiency",
+        "25-Year Warranty"
+      ],
+      "image": "/images/products/panel-poly.jpg",
+      "price": 11500,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-4",
+      "name": "On-Grid Inverter 5kW",
+      "category": "Inverters",
+      "description": "Smart grid-tied inverter with built-in Wi-Fi monitoring for residential solar systems.",
+      "specs": [
+        "5 kW",
+        "Single Phase",
+        "97.5% Efficiency",
+        "Wi-Fi Monitoring"
+      ],
+      "image": "/images/products/inverter-5kw.jpg",
+      "price": 42000,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-5",
+      "name": "Hybrid Inverter 10kW",
+      "category": "Inverters",
+      "description": "Versatile hybrid inverter supporting both grid-connected and battery backup operation.",
+      "specs": [
+        "10 kW",
+        "Three Phase",
+        "98.2% Efficiency",
+        "Battery Compatible"
+      ],
+      "image": "/uploads/loha-lakkad-hero-bg-desktop-1789207837015.webp",
+      "price": 88000,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-6",
+      "name": "String Inverter 50kW",
+      "category": "Inverters",
+      "description": "Commercial-grade string inverter with multiple MPPT channels for large rooftop systems.",
+      "specs": [
+        "50 kW",
+        "Three Phase",
+        "98.7% Efficiency",
+        "MPPT Tracking"
+      ],
+      "image": "/images/products/inverter-50kw.jpg",
+      "price": 195000,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-7",
+      "name": "Lithium Battery 5kWh",
+      "category": "Batteries",
+      "description": "Long-lasting lithium iron phosphate battery for reliable home energy storage.",
+      "specs": [
+        "5 kWh",
+        "LiFePO4",
+        "6000+ Cycles",
+        "10-Year Warranty"
+      ],
+      "image": "/images/products/battery-5kwh.jpg",
+      "price": 125000,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-8",
+      "name": "Lithium Battery 10kWh",
+      "category": "Batteries",
+      "description": "High-capacity battery module stackable up to 40kWh for whole-home backup.",
+      "specs": [
+        "10 kWh",
+        "LiFePO4",
+        "6000+ Cycles",
+        "10-Year Warranty"
+      ],
+      "image": "/images/products/battery-10kwh.jpg",
+      "price": 230000,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-9",
+      "name": "Aluminium Roof Mount",
+      "category": "Mounting Structures",
+      "description": "Lightweight aluminium mounting structure for RCC and metal sheet rooftops.",
+      "specs": [
+        "Corrosion Resistant",
+        "Adjustable Tilt",
+        "25-Year Life",
+        "Wind Load 150 km/h"
+      ],
+      "image": "/images/products/mount-roof.jpg",
+      "price": 3500,
+      "is_enquire_only": true
+    },
+    {
+      "id": "prod-10",
+      "name": "GI Ground Mount",
+      "category": "Mounting Structures",
+      "description": "Heavy-duty galvanized iron ground-mounting system for solar farms and open areas.",
+      "specs": [
+        "Hot-Dip Galvanized",
+        "Fixed Tilt",
+        "25-Year Life",
+        "Wind Load 180 km/h"
+      ],
+      "image": "/images/products/mount-ground.jpg",
+      "price": 4800,
+      "is_enquire_only": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Sharma Residence Solar Rooftop",
+      "location": "Jaipur, Rajasthan",
+      "capacity_kw": "10 kW",
+      "type": "Residential",
+      "client_type": "Individual Homeowner",
+      "description": "Complete rooftop solar installation with net metering for a 4BHK villa.",
+      "image": "/images/projects/jaipur-residence.jpg"
+    },
+    {
+      "id": "proj-2",
+      "title": "GreenTech Office Complex",
+      "location": "Gurugram, Haryana",
+      "capacity_kw": "150 kW",
+      "type": "Commercial",
+      "client_type": "Corporate Office",
+      "description": "Commercial rooftop solar system for a 5-storey office building.",
+      "image": "/images/projects/delhi-hospital.jpg"
+    },
+    {
+      "id": "proj-3",
+      "title": "Patel Manufacturing Unit",
+      "location": "Ahmedabad, Gujarat",
+      "capacity_kw": "500 kW",
+      "type": "Industrial",
+      "client_type": "Manufacturing",
+      "description": "Ground-mounted solar plant for a textile manufacturing facility.",
+      "image": "/images/projects/pune-factory.jpg"
+    },
+    {
+      "id": "proj-4",
+      "title": "Sunrise Apartments",
+      "location": "Pune, Maharashtra",
+      "capacity_kw": "50 kW",
+      "type": "Residential",
+      "client_type": "Housing Society",
+      "description": "Shared solar rooftop for a 20-unit apartment complex.",
+      "image": "/images/projects/jaipur-residence.jpg"
+    },
+    {
+      "id": "proj-5",
+      "title": "Royal Hotel & Resort",
+      "location": "Udaipur, Rajasthan",
+      "capacity_kw": "200 kW",
+      "type": "Commercial",
+      "client_type": "Hospitality",
+      "description": "Hybrid solar system with battery backup for a 5-star hotel.",
+      "image": "/images/projects/ahmedabad-commercial.jpg"
+    },
+    {
+      "id": "proj-6",
+      "title": "AutoParts Industries",
+      "location": "Chennai, Tamil Nadu",
+      "capacity_kw": "1 MW",
+      "type": "Industrial",
+      "client_type": "Heavy Industry",
+      "description": "MW-scale open access solar plant for automobile parts manufacturer.",
+      "image": "/images/projects/surat-textile.jpg"
+    },
+    {
+      "id": "proj-7",
+      "title": "City Mall Solar Installation",
+      "location": "Lucknow, UP",
+      "capacity_kw": "300 kW",
+      "type": "Commercial",
+      "client_type": "Retail",
+      "description": "Rooftop solar with EV charging infrastructure for a shopping mall.",
+      "image": "/images/projects/delhi-hospital.jpg"
+    },
+    {
+      "id": "proj-8",
+      "title": "Kumar Farmhouse",
+      "location": "Nashik, Maharashtra",
+      "capacity_kw": "15 kW",
+      "type": "Residential",
+      "client_type": "Individual Homeowner",
+      "description": "Off-grid solar system with battery storage for a farmhouse.",
+      "image": "/images/projects/jaipur-residence.jpg"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "name": "Rakesh Agarwal",
+      "location": "Jaipur, Rajasthan",
+      "system_type": "10 kW Residential",
+      "rating": 5,
+      "message": "Installed a 10kW system for our home. Electricity bill went from ₹8,000 to virtually zero! The team was professional and completed the installation in just 2 days.",
+      "photo": "/images/testimonials/vikram-singh.jpg"
+    },
+    {
+      "id": "test-2",
+      "name": "Sunita Devi",
+      "location": "Pune, Maharashtra",
+      "system_type": "3 kW Residential",
+      "rating": 5,
+      "message": "The subsidy processing was handled completely by SunTech. We got our PM Surya Ghar subsidy within 3 months. Excellent after-sales service too!",
+      "photo": "/images/testimonials/anita-deshmukh.jpg"
+    },
+    {
+      "id": "test-3",
+      "name": "Mohit Enterprises",
+      "location": "Ahmedabad, Gujarat",
+      "system_type": "200 kW Industrial",
+      "rating": 5,
+      "message": "Our factory's 200kW solar plant has been running flawlessly for 2 years. ROI has been better than projected. Highly recommend for industrial installations.",
+      "photo": "/images/testimonials/suresh-patel.jpg"
+    },
+    {
+      "id": "test-4",
+      "name": "Dr. Kavita Sharma",
+      "location": "Delhi NCR",
+      "system_type": "5 kW Residential",
+      "rating": 4,
+      "message": "Great experience from start to finish. The solar calculator on their website was spot-on with its estimates. Our 5kW system performs exactly as promised.",
+      "photo": "/images/testimonials/rahul-mehta.jpg"
+    },
+    {
+      "id": "test-5",
+      "name": "Hotel Grandeur",
+      "location": "Udaipur, Rajasthan",
+      "system_type": "150 kW Commercial",
+      "rating": 5,
+      "message": "A 150kW hybrid system with battery backup has eliminated our diesel generator costs completely. The monitoring dashboard gives us real-time insights.",
+      "photo": "/images/testimonials/vikram-singh.jpg"
+    }
+  ],
+  "blog_posts": [
+    {
+      "title": "best soloar brands",
+      "slug": "best-soloar-brands",
+      "excerpt": "best solar brands\n",
+      "content": "<h2>Article Heading</h2>\n<p>Write your article text here...</p>",
+      "category": "Solar Benefits",
+      "cover_image": "/images/blog/pm-surya-ghar.jpg",
+      "author": "SunTech Solar Team",
+      "published": true,
+      "id": "blog-1789195290177-ixu0x",
+      "created_at": "2026-09-12T06:41:30.177Z",
+      "read_time": "5 min read"
+    },
+    {
+      "id": "blog-1",
+      "slug": "top-5-benefits-of-rooftop-solar",
+      "title": "Top 5 Benefits of Rooftop Solar for Indian Homes",
+      "excerpt": "Discover how rooftop solar panels can save you money, increase your property value, and contribute to a cleaner India. Learn why 2024-2025 is the best time to go solar.",
+      "content": "<h2>Why Go Solar in 2025?</h2><p>India receives over 300 sunny days a year in most regions, making it one of the best countries in the world for solar energy. With electricity costs rising 5-8% annually and government subsidies at an all-time high, there has never been a better time to install rooftop solar.</p><h3>1. Save Up to 90% on Electricity Bills</h3><p>A well-designed solar system can offset most of your electricity consumption. A typical 5kW system for a 3BHK home generates 20-25 units daily, enough to cover most household needs. With net metering, excess power is exported to the grid, giving you credits on your bill.</p><h3>2. Government Subsidies Under PM Surya Ghar Yojana</h3><p>The central government offers substantial subsidies: ₹30,000/kW for the first 2 kW, ₹18,000/kW for the 3rd kW, and a flat ₹78,000 subsidy for systems 3kW and above.</p><h3>3. 25-Year Warranty & Long Lifespan</h3><p>Modern solar panels come with a 25-year performance warranty and can last 30+ years with proper maintenance.</p>",
+      "cover_image": "/images/blog/how-solar-works.jpg",
+      "category": "Solar Benefits",
+      "author": "SunTech Solar Team",
+      "read_time": "5 min read",
+      "published": true,
+      "created_at": "2024-08-15T10:00:00Z"
+    },
+    {
+      "id": "blog-2",
+      "slug": "complete-guide-solar-subsidies-2024",
+      "title": "Complete Guide to Solar Subsidies in India (PM Surya Ghar Yojana)",
+      "excerpt": "Everything you need to know about PM Surya Ghar Yojana, state subsidies, and how to claim them. Step-by-step guide to maximizing your solar savings.",
+      "content": "<h2>PM Surya Ghar Muft Bijli Yojana</h2><p>Launched to provide free electricity through rooftop solar to 1 crore homes across India.</p><h3>Subsidy Structure:</h3><ul><li>Up to 2 kW: ₹30,000 per kW</li><li>2 to 3 kW: Additional ₹18,000 per kW</li><li>Above 3 kW: Flat ₹78,000 maximum central subsidy</li></ul><p>State governments provide additional incentives in Gujarat, Maharashtra, Rajasthan, and Karnataka.</p>",
+      "cover_image": "/images/blog/commercial-solar-roi.jpg",
+      "category": "Government Schemes",
+      "author": "SunTech Solar Team",
+      "read_time": "7 min read",
+      "published": true,
+      "created_at": "2024-07-20T10:00:00Z"
+    },
+    {
+      "id": "blog-3",
+      "slug": "solar-panel-maintenance-tips",
+      "title": "Essential Solar Panel Maintenance Tips for Maximum Output",
+      "excerpt": "Learn how to maintain your solar panels for optimal performance. Simple tips on cleaning, monitoring, and when to call a professional.",
+      "content": "<h2>Keeping Your Solar System in Top Shape</h2><p>Solar panels require minimal maintenance, but periodic cleaning and inverter diagnostics ensure maximum energy output.</p><h3>Monthly Check:</h3><p>Clean dust early morning using plain water and a soft sponge. Never clean panels during mid-day heat to prevent thermal shock.</p>",
+      "cover_image": "/images/blog/maintenance-tips.jpg",
+      "category": "Maintenance",
+      "author": "SunTech Solar Team",
+      "read_time": "6 min read",
+      "published": true,
+      "created_at": "2024-06-10T10:00:00Z"
+    }
+  ],
+  "team_members": [
+    {
+      "id": "team-1",
+      "name": "Rajesh Sharma",
+      "role": "Founder & CEO",
+      "bio": "15+ years in renewable energy. Former solar division head at a leading EPC company.",
+      "photo": "/images/team/rajesh-sharma.jpg",
+      "order_index": 1
+    },
+    {
+      "id": "team-2",
+      "name": "Priya Patel",
+      "role": "Chief Technology Officer",
+      "bio": "B.Tech + M.Tech in Solar Energy. Leads system design and R&D initiatives.",
+      "photo": "/images/team/priya-patel.jpg",
+      "order_index": 2
+    },
+    {
+      "id": "team-3",
+      "name": "Amit Kumar",
+      "role": "Head of Operations",
+      "bio": "10+ years managing solar installations across India. Certified PV installer.",
+      "photo": "/images/team/amit-verma.jpg",
+      "order_index": 3
+    },
+    {
+      "id": "team-4",
+      "name": "Sneha Reddy",
+      "role": "Sales Director",
+      "bio": "Expert in commercial solar sales. Has closed 100+ MW of solar projects.",
+      "photo": "/images/team/sunita-rao.jpg",
+      "order_index": 4
+    },
+    {
+      "id": "team-5",
+      "name": "Vikram Singh",
+      "role": "Head of Engineering",
+      "bio": "Specializes in MW-scale solar plant design and grid integration.",
+      "photo": "/images/team/amit-verma.jpg",
+      "order_index": 5
+    },
+    {
+      "id": "team-6",
+      "name": "Meera Joshi",
+      "role": "Customer Success Manager",
+      "bio": "Ensures seamless post-installation experience and manages AMC operations.",
+      "photo": "/images/team/sunita-rao.jpg",
+      "order_index": 6
+    }
+  ],
+  "government_schemes": [
+    {
+      "id": "sch-1",
+      "title": "PM Surya Ghar Muft Bijli Yojana",
+      "subtitle": "Central government scheme to provide free electricity through rooftop solar to 1 crore homes",
+      "description": "Direct bank transfer subsidies up to ₹78,000 for residential rooftop solar with collateral-free low-interest bank loans.",
+      "highlights": [
+        "Up to 300 units of free electricity per month",
+        "Direct subsidy credited to bank account after installation",
+        "Collateral-free loans available from nationalized banks at 7% p.a.",
+        "Available for all residential consumers across India"
+      ],
+      "subsidy_slabs": [
+        {
+          "size": "Up to 2 kW",
+          "subsidy": "₹30,000/kW",
+          "example": "2 kW = ₹60,000 subsidy"
+        },
+        {
+          "size": "2 kW to 3 kW",
+          "subsidy": "₹18,000/kW (additional)",
+          "example": "3 kW = ₹78,000 subsidy"
+        },
+        {
+          "size": "Above 3 kW",
+          "subsidy": "Flat ₹78,000",
+          "example": "5 kW = ₹78,000 subsidy"
+        }
+      ],
+      "state_schemes": [
+        {
+          "state": "Gujarat",
+          "details": "Additional ₹10,000/kW subsidy for up to 10 kW systems"
+        },
+        {
+          "state": "Maharashtra",
+          "details": "MEDA special subsidy for housing societies and institutions"
+        },
+        {
+          "state": "Rajasthan",
+          "details": "Subsidized tariff rates for domestic rooftop solar consumers"
+        },
+        {
+          "state": "Karnataka",
+          "details": "KREDL subsidy programs for residential and institutional sectors"
+        }
+      ]
+    }
+  ],
+  "enquiries": [
+    {
+      "id": "lead-1",
+      "name": "Vikramaditya Roy",
+      "phone": "9829012345",
+      "email": "vikram.roy@example.com",
+      "location": "Jaipur, Rajasthan",
+      "message": "Interested in 5kW rooftop solar for our independent bungalow under PM Surya Ghar Yojana.",
+      "source_page": "Contact Page",
+      "system_size_estimate": "5 kW",
+      "monthly_bill": "₹6,500",
+      "status": "New",
+      "created_at": "2025-02-10T14:30:00Z"
+    },
+    {
+      "id": "lead-2",
+      "name": "Ananya Deshmukh",
+      "phone": "9876543210",
+      "email": "ananya.d@example.com",
+      "location": "Pune, Maharashtra",
+      "message": "Calculated 8kW requirement for residential society clubhouse.",
+      "source_page": "Solar Calculator",
+      "system_size_estimate": "8 kW",
+      "monthly_bill": "₹12,000",
+      "status": "Contacted",
+      "created_at": "2025-02-11T10:15:00Z"
+    },
+    {
+      "id": "lead-3",
+      "name": "Kishore Singhania",
+      "phone": "9845012345",
+      "email": "singhania.textiles@example.com",
+      "location": "Ahmedabad, Gujarat",
+      "message": "Need feasibility survey for 250kW industrial rooftop plant for textile factory.",
+      "source_page": "Commercial Solar",
+      "system_size_estimate": "250 kW",
+      "monthly_bill": "₹2,50,000",
+      "status": "Proposal Sent",
+      "created_at": "2025-02-12T16:45:00Z"
+    }
+  ]
+}

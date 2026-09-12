@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b5c"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="cell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="100" y1="0" x2="100" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="300" y1="0" x2="300" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="500" y1="0" x2="500" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="700" y1="0" x2="700" y2="600"/>
+  </g>
+
+  <!-- Solar Panel Graphic Frame -->
+  <g transform="translate(180, 80)">
+    <!-- Aluminum Frame Outer -->
+    <rect x="0" y="0" width="440" height="340" rx="12" fill="#334155" stroke="#94a3b8" stroke-width="4"/>
+    <rect x="12" y="12" width="416" height="316" rx="6" fill="#090d16"/>
+    
+    <!-- 4x3 Solar Cells Array -->
+    
+      <rect x="22" y="22" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="22" y1="69" x2="116" y2="69" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="69" y1="22" x2="69" y2="116" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="122" y="22" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="122" y1="69" x2="216" y2="69" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="169" y1="22" x2="169" y2="116" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="222" y="22" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="222" y1="69" x2="316" y2="69" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="269" y1="22" x2="269" y2="116" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="322" y="22" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="322" y1="69" x2="416" y2="69" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="369" y1="22" x2="369" y2="116" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="22" y="122" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="22" y1="169" x2="116" y2="169" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="69" y1="122" x2="69" y2="216" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="122" y="122" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="122" y1="169" x2="216" y2="169" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="169" y1="122" x2="169" y2="216" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="222" y="122" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="222" y1="169" x2="316" y2="169" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="269" y1="122" x2="269" y2="216" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="322" y="122" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="322" y1="169" x2="416" y2="169" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="369" y1="122" x2="369" y2="216" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="22" y="222" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="22" y1="269" x2="116" y2="269" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="69" y1="222" x2="69" y2="316" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="122" y="222" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="122" y1="269" x2="216" y2="269" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="169" y1="222" x2="169" y2="316" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="222" y="222" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="222" y1="269" x2="316" y2="269" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="269" y1="222" x2="269" y2="316" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+      <rect x="322" y="222" width="94" height="94" rx="4" fill="url(#cell)" opacity="0.9"/>
+      <line x1="322" y1="269" x2="416" y2="269" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+      <line x1="369" y1="222" x2="369" y2="316" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+    
+
+    <!-- Glass Glare Reflection -->
+    <path d="M 20 20 L 220 20 L 300 324 L 20 324 Z" fill="#ffffff" opacity="0.06"/>
+  </g>
+
+  <!-- Sun Rays Graphic -->
+  <g transform="translate(680, 70)">
+    <circle cx="0" cy="0" r="32" fill="url(#sun)" filter="drop-shadow(0 0 16px rgba(245,158,11,0.6))"/>
+    <line x1="0" y1="-44" x2="0" y2="-54" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <line x1="31" y1="-31" x2="38" y2="-38" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <line x1="44" y1="0" x2="54" y2="0" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+    <line x1="31" y1="31" x2="38" y2="38" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom Details Overlay -->
+  <rect x="0" y="470" width="800" height="130" fill="#0b132b" opacity="0.95"/>
+  <text x="50" y="520" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" font-size="24" fill="#ffffff">MonoCrystalline 545W Panel</text>
+  <text x="50" y="555" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#93c5fd">Tier-1 Mono PERC Cell Technology • 25-Yr Warranty</text>
+
+  <!-- Badge Pill -->
+  <g transform="translate(620, 505)">
+    <rect x="0" y="0" width="130" height="34" rx="17" fill="#22c55e"/>
+    <text x="65" y="22" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" font-size="13" fill="#ffffff" text-anchor="middle">545 Wp</text>
+  </g>
+</svg>

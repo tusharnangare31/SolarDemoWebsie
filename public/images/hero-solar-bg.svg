@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="sky-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="45%" stop-color="#7dd3fc"/>
+      <stop offset="70%" stop-color="#bae6fd"/>
+      <stop offset="90%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+
+    <!-- Sun Glow Radial Gradient -->
+    <radialGradient id="sun-glow" cx="70%" cy="38%" r="45%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="15%" stop-color="#fef08a" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#f59e0b" stop-opacity="0.6"/>
+      <stop offset="65%" stop-color="#ea580c" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Lens flare ring -->
+    <radialGradient id="flare-ring" cx="68%" cy="40%" r="30%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#fef08a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Solar Cell Gradient -->
+    <linearGradient id="pv-cell" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="50%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Glass Reflection Gradient -->
+    <linearGradient id="pv-glare" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="40%" stop-color="#fef08a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Left White Reading Mask for Text Clarity -->
+    <linearGradient id="left-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.92"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.65"/>
+      <stop offset="85%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1600" height="900" fill="url(#sky-grad)"/>
+
+  <!-- Distant Mountain Ridges -->
+  <path d="M 400 440 Q 600 370 800 410 T 1200 390 T 1600 430 L 1600 550 L 400 550 Z" fill="#1e3a5f" opacity="0.45"/>
+  <path d="M 550 460 Q 750 395 950 435 T 1400 410 T 1600 450 L 1600 550 L 550 550 Z" fill="#14532d" opacity="0.4"/>
+  <path d="M 650 470 Q 880 430 1100 455 T 1500 435 T 1600 460 L 1600 550 L 650 550 Z" fill="#15803d" opacity="0.5"/>
+
+  <!-- Radiant Sun Burst & Horizon Glow -->
+  <circle cx="1120" cy="340" r="450" fill="url(#sun-glow)"/>
+  <circle cx="1120" cy="340" r="80" fill="#ffffff" filter="drop-shadow(0 0 40px #fef08a)"/>
+  <ellipse cx="1120" cy="340" rx="600" ry="120" fill="url(#flare-ring)" opacity="0.7"/>
+
+  <!-- Sun Rays Flare -->
+  <g opacity="0.35" stroke="#fef08a" stroke-width="2">
+    <line x1="1120" y1="340" x2="300" y2="850" stroke-width="8"/>
+    <line x1="1120" y1="340" x2="500" y2="900" stroke-width="12"/>
+    <line x1="1120" y1="340" x2="750" y2="900" stroke-width="14"/>
+    <line x1="1120" y1="340" x2="1100" y2="900" stroke-width="20"/>
+    <line x1="1120" y1="340" x2="1400" y2="900" stroke-width="16"/>
+  </g>
+
+  <!-- Ground Layer -->
+  <path d="M 400 480 L 1600 460 L 1600 900 L 400 900 Z" fill="#166534" opacity="0.6"/>
+
+  <!-- PERSPECTIVE SOLAR PANEL FARM ARRAYS -->
+  <!-- Array 1: Far Distance -->
+  <g opacity="0.75">
+    <polygon points="780,485 1580,470 1560,510 750,525" fill="#1e293b"/>
+    <polygon points="782,487 1578,472 1558,508 752,523" fill="url(#pv-cell)"/>
+  </g>
+
+  <!-- Array 2: Mid Distance -->
+  <g opacity="0.85">
+    <polygon points="680,525 1580,500 1550,570 640,595" fill="#0f172a"/>
+    <polygon points="684,528 1576,503 1546,567 644,592" fill="url(#pv-cell)"/>
+    <!-- Glare reflection on mid array -->
+    <polygon points="684,528 1200,515 1100,580 644,592" fill="url(#pv-glare)"/>
+  </g>
+
+  <!-- Array 3: Foreground Main Massive Array (as seen in mockup) -->
+  <g filter="drop-shadow(0 20px 30px rgba(0,0,0,0.4))">
+    <!-- Aluminum Mounting Structure / Outer Bezel -->
+    <polygon points="520,590 1620,530 1580,880 420,950" fill="#334155" stroke="#94a3b8" stroke-width="4"/>
+    <!-- Deep Blue Photovoltaic Field -->
+    <polygon points="530,598 1610,538 1570,872 430,942" fill="#090d16"/>
+
+    <!-- 5 Rows of Solar Panels with Frame Grid Lines -->
+    <!-- Row 1 -->
+    <polygon points="540,610 1600,550 1590,610 520,670" fill="url(#pv-cell)" stroke="#64748b" stroke-width="2"/>
+    <!-- Row 2 -->
+    <polygon points="515,675 1585,615 1575,685 490,745" fill="url(#pv-cell)" stroke="#64748b" stroke-width="2"/>
+    <!-- Row 3 -->
+    <polygon points="485,750 1570,690 1560,770 460,830" fill="url(#pv-cell)" stroke="#64748b" stroke-width="2"/>
+    <!-- Row 4 -->
+    <polygon points="455,835 1555,775 1540,865 425,935" fill="url(#pv-cell)" stroke="#64748b" stroke-width="3"/>
+
+    <!-- Vertical Column Grid Separators (Perspective convergence) -->
+    <line x1="720" y1="580" x2="620" y2="920" stroke="#cbd5e1" stroke-width="2.5" opacity="0.7"/>
+    <line x1="920" y1="565" x2="840" y2="900" stroke="#cbd5e1" stroke-width="2.5" opacity="0.7"/>
+    <line x1="1120" y1="555" x2="1080" y2="885" stroke="#cbd5e1" stroke-width="2.5" opacity="0.7"/>
+    <line x1="1320" y1="545" x2="1310" y2="875" stroke="#cbd5e1" stroke-width="2.5" opacity="0.7"/>
+    <line x1="1500" y1="535" x2="1490" y2="870" stroke="#cbd5e1" stroke-width="2.5" opacity="0.7"/>
+
+    <!-- Intense Golden Sunlight Glare sweeping across the panels -->
+    <polygon points="530,598 1250,550 1100,880 430,942" fill="url(#pv-glare)"/>
+  </g>
+
+  <!-- Left Side White Soft Gradient Mask (Ensures all text is 100% crisp & readable) -->
+  <rect x="0" y="0" width="1050" height="900" fill="url(#left-fade)"/>
+</svg>

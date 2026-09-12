@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="srv-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003d82"/>
+      <stop offset="100%" stop-color="#0056b3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#srv-bg)"/>
+
+  <!-- Geometric Decorative Lines -->
+  <g opacity="0.1" stroke="#ffffff" stroke-width="2">
+    <circle cx="700" cy="100" r="180" fill="none"/>
+    <circle cx="700" cy="100" r="260" fill="none"/>
+    <circle cx="100" cy="400" r="140" fill="none"/>
+  </g>
+
+  <!-- Central Icon Graphic (Solar Array + Battery) -->
+  <g transform="translate(320, 100)">
+    <!-- Sunburst -->
+    <circle cx="80" cy="80" r="50" fill="#f59e0b" opacity="0.9"/>
+    <!-- Solar Panels -->
+    <polygon points="0,170 160,170 140,110 20,110" fill="#1e40af" stroke="#ffffff" stroke-width="2"/>
+    <line x1="80" y1="110" x2="80" y2="170" stroke="#ffffff" stroke-width="2"/>
+    <line x1="10" y1="140" x2="150" y2="140" stroke="#ffffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Bottom Details Overlay -->
+  <rect x="0" y="360" width="800" height="140" fill="#090d16" opacity="0.95"/>
+  <text x="50" y="415" font-family="system-ui, -apple-system, sans-serif" font-weight="bold" font-size="28" fill="#ffffff">On-Grid, Off-Grid & Hybrid</text>
+  <text x="50" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#93c5fd">Battery Storage with Zero Power Outages</text>
+</svg>
