@@ -81,7 +81,11 @@ export default function TeamManagerPage() {
         body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Member simulated!', { icon: '🔒' });
+        setIsModalOpen(false);
+      } else if (res.ok) {
         toast.success(editingItem ? 'Member updated!' : 'Member added!');
         setIsModalOpen(false);
         fetchTeam();
@@ -99,7 +103,11 @@ export default function TeamManagerPage() {
     if (!deleteTarget) return;
     try {
       const res = await fetch(`/api/team?id=${deleteTarget.id}`, { method: 'DELETE' });
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Delete simulated!', { icon: '🔒' });
+        setDeleteTarget(null);
+      } else if (res.ok) {
         toast.success('Team member removed');
         setDeleteTarget(null);
         fetchTeam();

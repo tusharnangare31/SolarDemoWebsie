@@ -24,8 +24,8 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Demo Read-Only Protection: Prevent any unauthorized mutations in deployed showcase
-  // Set NEXT_PUBLIC_DEMO_MODE=false in environment to enable editing when handed over to shop owner
+  // Demo Read-Only Protection: Simulate mutations safely without modifying live data
+  // Set NEXT_PUBLIC_DEMO_MODE=false in environment to enable real writes when handed over to shop owner
   const isDemoMode = process.env.NEXT_PUBLIC_DEMO_MODE !== 'false';
   if (isDemoMode && pathname.startsWith('/api/')) {
     const isMutation = ['POST', 'PUT', 'PATCH', 'DELETE'].includes(method);
@@ -36,11 +36,11 @@ export function middleware(request: NextRequest) {
     if (isMutation && !isAuthRoute && !isPublicLeadSubmit) {
       return NextResponse.json(
         {
-          success: false,
-          error:
-            'Demo Mode: Editing and deleting are disabled in this public preview so visitors can safely explore our work without modifying content.',
+          success: true,
+          demo: true,
+          message: 'Demo Mode Activated: Changes simulated in preview mode!',
         },
-        { status: 403 }
+        { status: 200 }
       );
     }
   }

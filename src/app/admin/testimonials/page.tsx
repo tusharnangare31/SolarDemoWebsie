@@ -85,7 +85,11 @@ export default function TestimonialsManagerPage() {
         body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Review simulated!', { icon: '🔒' });
+        setIsModalOpen(false);
+      } else if (res.ok) {
         toast.success(editingItem ? 'Review updated!' : 'Review added!');
         setIsModalOpen(false);
         fetchTestimonials();
@@ -103,7 +107,11 @@ export default function TestimonialsManagerPage() {
     if (!deleteTarget) return;
     try {
       const res = await fetch(`/api/testimonials?id=${deleteTarget.id}`, { method: 'DELETE' });
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Delete simulated!', { icon: '🔒' });
+        setDeleteTarget(null);
+      } else if (res.ok) {
         toast.success('Testimonial removed');
         setDeleteTarget(null);
         fetchTestimonials();

@@ -92,7 +92,11 @@ export default function ProjectsManagerPage() {
         body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Project simulated!', { icon: '🔒' });
+        setIsModalOpen(false);
+      } else if (res.ok) {
         toast.success(editingItem ? 'Project updated!' : 'Project created!');
         setIsModalOpen(false);
         fetchProjects();
@@ -110,7 +114,11 @@ export default function ProjectsManagerPage() {
     if (!deleteTarget) return;
     try {
       const res = await fetch(`/api/projects?id=${deleteTarget.id}`, { method: 'DELETE' });
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Delete simulated!', { icon: '🔒' });
+        setDeleteTarget(null);
+      } else if (res.ok) {
         toast.success('Project deleted');
         setDeleteTarget(null);
         fetchProjects();
@@ -118,7 +126,7 @@ export default function ProjectsManagerPage() {
         toast.error('Failed to delete project');
       }
     } catch {
-      toast.error('Network error');
+      toast.error('Network error deleting project');
     }
   };
 

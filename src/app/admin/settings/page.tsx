@@ -44,7 +44,10 @@ export default function SiteSettingsPage() {
         body: JSON.stringify(settings),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Settings simulated!', { icon: '🔒' });
+      } else if (res.ok) {
         toast.success('Site settings updated successfully! Changes are live.');
       } else {
         toast.error('Failed to save settings');

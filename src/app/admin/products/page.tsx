@@ -97,7 +97,11 @@ export default function ProductsManagerPage() {
         body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Product simulated!', { icon: '🔒' });
+        setIsModalOpen(false);
+      } else if (res.ok) {
         toast.success(editingItem ? 'Product updated!' : 'Product created!');
         setIsModalOpen(false);
         fetchProducts();
@@ -115,7 +119,11 @@ export default function ProductsManagerPage() {
     if (!deleteTarget) return;
     try {
       const res = await fetch(`/api/products?id=${deleteTarget.id}`, { method: 'DELETE' });
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Delete simulated!', { icon: '🔒' });
+        setDeleteTarget(null);
+      } else if (res.ok) {
         toast.success('Product removed');
         setDeleteTarget(null);
         fetchProducts();

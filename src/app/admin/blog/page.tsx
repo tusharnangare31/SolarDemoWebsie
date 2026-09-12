@@ -108,7 +108,11 @@ export default function BlogManagerPage() {
         body: JSON.stringify(payload),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Post simulated!', { icon: '🔒' });
+        setIsModalOpen(false);
+      } else if (res.ok) {
         toast.success(editingItem ? 'Post updated!' : 'Post published!');
         setIsModalOpen(false);
         fetchPosts();
@@ -126,7 +130,11 @@ export default function BlogManagerPage() {
     if (!deleteTarget) return;
     try {
       const res = await fetch(`/api/blog?id=${deleteTarget.id}`, { method: 'DELETE' });
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (data?.demo) {
+        toast.success('Demo Mode Activated: Delete simulated!', { icon: '🔒' });
+        setDeleteTarget(null);
+      } else if (res.ok) {
         toast.success('Post deleted');
         setDeleteTarget(null);
         fetchPosts();
