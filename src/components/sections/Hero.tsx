@@ -32,9 +32,17 @@ const slidesData = [
   },
 ];
 
+// Cloned boundary slides for continuous forward infinite looping
+const extendedSlides = [
+  slidesData[slidesData.length - 1], // Index 0: clone of slide 3
+  ...slidesData,                     // Indices 1, 2, 3: slides 1, 2, 3
+  slidesData[0],                     // Index 4: clone of slide 1
+];
+
 export default function Hero() {
   const [settings, setSettings] = useState<SiteSettings | null>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(true);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -46,12 +54,36 @@ export default function Hero() {
       .catch(() => {});
   }, []);
 
+  // Restore transition capability after instantaneous boundary reset
+  useEffect(() => {
+    if (!isTransitioning) {
+      const frame = requestAnimationFrame(() => {
+        setIsTransitioning(true);
+      });
+      return () => cancelAnimationFrame(frame);
+    }
+  }, [isTransitioning]);
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slidesData.length);
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev + 1);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => prev - 1);
+  };
+
+  const handleTransitionEnd = () => {
+    if (currentIndex >= extendedSlides.length - 1) {
+      // Reached the clone of slide 1 -> jump to real slide 1 without animation
+      setIsTransitioning(false);
+      setCurrentIndex(1);
+    } else if (currentIndex <= 0) {
+      // Reached the clone of slide 3 -> jump to real slide 3 without animation
+      setIsTransitioning(false);
+      setCurrentIndex(slidesData.length);
+    }
   };
 
   useEffect(() => {
@@ -65,28 +97,34 @@ export default function Hero() {
   }, []);
 
   const handleManualSlide = (index: number) => {
-    setCurrentSlide(index);
+    setIsTransitioning(true);
+    setCurrentIndex(index + 1);
     if (timerRef.current) {
       clearInterval(timerRef.current);
       timerRef.current = setInterval(nextSlide, 5500);
     }
   };
 
-  const current = slidesData[currentSlide];
+  // Active slide index for text & indicator dots (0, 1, or 2)
+  const activeDotIndex = (currentIndex - 1 + slidesData.length) % slidesData.length;
+  const current = slidesData[activeDotIndex];
 
   return (
     <div className="relative">
       {/* Hero Section with Fixed Rigid Height to prevent any UI resizing */}
       <section className="relative h-[560px] sm:h-[600px] lg:h-[640px] flex items-center overflow-hidden pt-20 lg:pt-24 group">
         
-        {/* Sliding Background Images (Exact same 1024x396 pixel dimensions, no white overlay) */}
+        {/* Sliding Background Images: Infinite Continuous Forward Loop */}
         <div
-          className="absolute inset-0 flex transition-transform duration-700 ease-in-out"
+          className={`absolute inset-0 flex ${
+            isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''
+          }`}
           style={{
-            transform: `translateX(-${currentSlide * 100}%)`,
+            transform: `translateX(-${currentIndex * 100}%)`,
           }}
+          onTransitionEnd={handleTransitionEnd}
         >
-          {slidesData.map((slide, idx) => (
+          {extendedSlides.map((slide, idx) => (
             <div
               key={idx}
               className="w-full h-full shrink-0 bg-cover bg-center"
@@ -100,7 +138,7 @@ export default function Hero() {
         {/* Left and Right Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/85 hover:bg-white text-slate-800 flex items-center justify-center shadow-lg transition-all opacity-0 group-hover:opacity-100 cursor-pointer hover:scale-110"
+          className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center border border-slate-200/80 transition-all opacity-0 group-hover:opacity-100 cursor-pointer hover:scale-110"
           aria-label="Previous Slide"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -108,7 +146,7 @@ export default function Hero() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/85 hover:bg-white text-slate-800 flex items-center justify-center shadow-lg transition-all opacity-0 group-hover:opacity-100 cursor-pointer hover:scale-110"
+          className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 hover:bg-white text-slate-800 flex items-center justify-center border border-slate-200/80 transition-all opacity-0 group-hover:opacity-100 cursor-pointer hover:scale-110"
           aria-label="Next Slide"
         >
           <ChevronRight className="w-6 h-6" />
@@ -119,7 +157,7 @@ export default function Hero() {
           <div className="max-w-2xl lg:max-w-xl h-[330px] flex flex-col justify-center">
             {/* Kicker badge */}
             <div className="inline-flex items-center gap-2 mb-3">
-              <span className="text-xs sm:text-sm font-bold tracking-wider text-green-700 uppercase bg-green-50/90 border border-green-200/80 px-3.5 py-1 rounded-full shadow-xs">
+              <span className="text-xs sm:text-sm font-bold tracking-wider text-green-700 uppercase bg-green-50/90 border border-green-200/80 px-3.5 py-1 rounded-full">
                 {current.kicker}
               </span>
             </div>
@@ -139,14 +177,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold text-base px-7 py-3 rounded-xl shadow-lg shadow-green-600/25 transition-all duration-200 hover:-translate-y-0.5 group"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold text-base px-7 py-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 group"
               >
                 <span>Get a Free Quote</span>
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-2 bg-white/85 hover:bg-white text-slate-800 font-semibold text-base px-7 py-3 rounded-xl border border-slate-300/80 shadow-sm transition-all duration-200 hover:shadow hover:-translate-y-0.5 backdrop-blur-xs"
+                className="inline-flex items-center justify-center gap-2 bg-white/90 hover:bg-white text-slate-800 font-semibold text-base px-7 py-3 rounded-xl border border-slate-300/80 transition-all duration-200 hover:-translate-y-0.5 backdrop-blur-xs"
               >
                 <span>Explore Our Services</span>
               </Link>
@@ -161,7 +199,7 @@ export default function Hero() {
               key={idx}
               onClick={() => handleManualSlide(idx)}
               className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                currentSlide === idx ? 'w-8 bg-green-600 shadow-md' : 'w-2.5 bg-slate-400/60 hover:bg-slate-600'
+                activeDotIndex === idx ? 'w-8 bg-green-600' : 'w-2.5 bg-slate-400/60 hover:bg-slate-600'
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
@@ -169,9 +207,9 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* 4-Feature Value Bar Floating Overlap */}
+      {/* 4-Feature Value Bar Floating Overlap - Shadow completely removed */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 sm:-mt-12">
-        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-100 p-6 sm:p-8">
+        <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/80 p-6 sm:p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 divide-y sm:divide-y-0 sm:divide-x sm:divide-slate-100">
             {/* Feature 1 */}
             <div className="flex items-start gap-4 pt-4 sm:pt-0 sm:pr-4">
