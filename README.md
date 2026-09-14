@@ -131,22 +131,22 @@
 
 ```mermaid
 flowchart TD
-    subgraph Client / Visitor
-        V[Public Visitor] -->|Browse & Calculate| UI[Next.js App Router]
-        UI -->|Request Free Quote| API_L[/api/leads]
+    subgraph Client ["Client & Public Visitors"]
+        V["Public Visitor"] -->|Browse & Calculate| UI["Next.js App Router"]
+        UI -->|Request Free Quote| API_L["/api/leads"]
     end
 
-    subgraph Admin Portal
-        A[Admin / Shop Owner] -->|Authenticate| Login[/api/auth/login]
-        Login -->|Set HTTP-only Cookie| MW[Next.js Middleware Guard]
-        MW --> AdminUI[10 Admin CMS Modules]
-        AdminUI -->|Manage Content| API_C[/api/*]
+    subgraph Admin ["Admin Management Portal"]
+        A["Admin / Shop Owner"] -->|Authenticate| Login["/api/auth/login"]
+        Login -->|Set HTTP-only Cookie| MW["Next.js Middleware Guard"]
+        MW --> AdminUI["10 Admin CMS Modules"]
+        AdminUI -->|Manage Content| API_C["/api/*"]
     end
 
-    subgraph Data & Storage
-        API_L --> DB[(src/data/db.json)]
+    subgraph Storage ["Data & Media Storage"]
+        API_L --> DB[("src/data/db.json")]
         API_C --> DB
-        AdminUI -->|Upload Media| Media[public/uploads/]
+        AdminUI -->|Upload Media| Media["public/uploads/"]
     end
 ```
 
