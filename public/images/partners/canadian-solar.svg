@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 45" height="45">
+    <g transform="translate(6, 6)">
+      <path d="M15 3L18 10L24 11L20 16L22 22L15 19L8 22L10 16L6 11L12 10L15 3Z" fill="#dc2626"/>
+    </g>
+    <text x="36" y="23" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="15" fill="#0f172a">Canadian</text>
+    <text x="36" y="35" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="12" fill="#dc2626">SOLAR</text>
+  </svg>

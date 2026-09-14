@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 45" height="45">
+    <g transform="translate(6, 8)">
+      <path d="M14 4l2.5-3s4.2.1 8.5 2c-1.1 1.6-3.2 2.4-3.2 2.4-.2-1.4-1.2-1.8-4.4-1.8L14 23 9.6 3.6c-3.2 0-4.2.4-4.4 1.8 0 0-2.1-.8-3.2-2.4C6.3 1.1 10.5 1 10.5 1L14 4z" fill="#e82127"/>
+    </g>
+    <text x="38" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="18" fill="#e82127" letter-spacing="1">TESLA</text>
+  </svg>

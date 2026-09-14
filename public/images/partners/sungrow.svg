@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 45" height="45">
+    <g transform="translate(6, 8)">
+      <circle cx="14" cy="14" r="11" stroke="#f97316" stroke-width="3" fill="none"/>
+      <circle cx="14" cy="14" r="5" fill="#f97316"/>
+    </g>
+    <text x="40" y="27" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="18" fill="#ea580c" letter-spacing="1">SUNGROW</text>
+  </svg>

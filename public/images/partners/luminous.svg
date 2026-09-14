@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 45" height="45">
+    <g transform="translate(5, 7)">
+      <path d="M15 2L19 11L28 15L19 19L15 28L11 19L2 15L11 11L15 2Z" fill="#f59e0b"/>
+    </g>
+    <text x="40" y="28" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="19" fill="#1e3a8a" letter-spacing="0.5">LUMINOUS</text>
+  </svg>
