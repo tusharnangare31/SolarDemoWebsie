@@ -31,6 +31,16 @@ export const metadata: Metadata = {
     'solar subsidy',
     'renewable energy',
   ],
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   openGraph: {
     title: 'SunTech Solar | India\'s Trusted Solar EPC Company',
     description: 'Save up to 90% on electricity bills. Get a free solar quote today!',
